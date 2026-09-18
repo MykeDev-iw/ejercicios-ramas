@@ -1,0 +1,4 @@
+Hotfix: la alerta de paro de linea no se disparaba
+Causa: el umbral de tiempo muerto estaba en segundos y el comparador lo evaluaba contra minutos, por lo que nunca alcanzaba el valor limite.
+Solucion: se unifico la unidad a segundos en el comparador y se agrego validacion del tipo de dato al leer el parametro.
+Impacto: produccion. Requiere despliegue inmediato, la linea quedo sin alerta durante 3 turnos.
